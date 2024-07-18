@@ -1,19 +1,29 @@
 # API Installation
-Git Clone https://github.com/adibminanurohman/Apitest-Laravel11-SantriKoding.git
-composer -v
-composer install
 
-**Edit** .env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=db_laravel11_api
-DB_USERNAME=root
-DB_PASSWORD=
+1. Clone repository:
+   ```bash
+   git clone https://github.com/adibminanurohman/Apitest-Laravel11-SantriKoding.git
+   ```
 
-php artisan migrate
-php artisan key:generate
+2. Install dependencies:
+   ```bash
+   composer install
+   ```
 
+3. Edit `.env` file:
+   ```
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=db_laravel11_api
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+
+4. Generate application key:
+   ```bash
+   php artisan key:generate
+   ```
 
 # API Documentation
 
@@ -74,22 +84,20 @@ http://api-berita.test/api
   ```
 
 ### Update a Post
-**Endpoint:** `POST /posts/{id}`
+**Endpoint:** `PUT /posts/{id}`
 
 - **Description:** Update an existing post.
 - **URL:** `http://api-berita.test/api/posts/{id}`
-- **Method:** `POST`
+- **Method:** `PUT`
 - **Request Body:**
   - `image` (file): The image file to upload (optional).
   - `title` (text): The title of the post.
   - `content` (text): The content of the post.
-  - `_method` (text): `PUT` (to indicate an update operation).
 - **Example Request Body (form-data):**
   ```
   key: image, type: file, value: {insert file img}
   key: title, type: text, value: {insert text}
   key: content, type: text, value: {insert text}
-  key: _method, type: text, value: PUT
   ```
 - **Response:**
   ```json
@@ -115,7 +123,4 @@ http://api-berita.test/api
     "message": "Post deleted successfully"
   }
   ```
-
----
-
-Pastikan untuk menyesuaikan dokumentasi ini sesuai dengan respons aktual dari API Anda jika ada perbedaan. Dokumentasi yang baik membantu pengembang lain untuk memahami dan menggunakan API Anda dengan mudah.
+```
