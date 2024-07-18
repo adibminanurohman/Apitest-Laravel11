@@ -1,3 +1,20 @@
+# API Installation
+Git Clone https://github.com/adibminanurohman/Apitest-Laravel11-SantriKoding.git
+composer -v
+composer install
+
+**Edit** .env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=db_laravel11_api
+DB_USERNAME=root
+DB_PASSWORD=
+
+php artisan migrate
+php artisan key:generate
+
+
 # API Documentation
 
 ## Base URL
