@@ -24,6 +24,10 @@
    ```bash
    php artisan key:generate
    ```
+5. Migrate database:
+   ```bash
+   php artisan migrate
+   ```
 
 # API Documentation
 
